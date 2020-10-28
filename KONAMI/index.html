@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>KONAMI CODE</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+    <div>PRESS FOLLOWING KEYWORD: 'QWERTY'</div>
+    <script >
+        const a=[];
+        const code ='qwerty';
+        window.addEventListener('keyup',(e)=>
+        {
+            a.push(e.key);
+            a.splice(-code.length-1,a.length-code.length);
+            if(a.join('').includes(code))
+            {
+                cornify_add();
+            }
+        });
+    </script>
+</body>
+</html>
